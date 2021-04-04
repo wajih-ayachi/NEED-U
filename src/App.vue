@@ -10,11 +10,12 @@
       <v-spacer> </v-spacer>
       <v-btn text rounded style="font-weight: bold"> A propos</v-btn>
       <v-spacer> </v-spacer>
-      <v-btn text rounded style="font-weight: bold">Actualité</v-btn>
-      <v-spacer> </v-spacer>
-      <v-btn text rounded style="font-weight: bold">Contact</v-btn>
-      <v-spacer> </v-spacer>
-      <v-btn text rounded style="font-weight: bold"></v-btn>
+      <v-tab to="/actu">
+        <v-btn text rounded style="font-weight: bold">Actualités</v-btn>
+      </v-tab>      <v-spacer> </v-spacer>
+      <v-tab to="/contact">
+        <v-btn text rounded style="font-weight: bold">Contact</v-btn>
+      </v-tab>
       <v-spacer> </v-spacer>
       <v-btn icon prepend-icon="mdi-account-cercle">
         <v-icon light> mdi-heart </v-icon>
@@ -24,6 +25,10 @@
       </v-btn>
       <v-btn text rounded>Login</v-btn>
     </v-app-bar>
+
+    <v-container class="test">
+      <router-view></router-view>
+    </v-container>
 
     <v-autocomplete
       v-model="model"
